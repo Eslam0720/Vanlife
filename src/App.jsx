@@ -25,7 +25,7 @@ function About() {
     <>
     <div className='grid justify-items-center-safe '>
       <div className='text-center my-5'>
-        <img className='w-screen h-120' src='./public/about.png' />
+        <img className='w-screen h-120' src='./about.png' />
         <h1 className='text-bold mt-3 text-3xl'>Don't squeeze in a sedan when you could relax in a van.</h1>
         <h3 className='text-bold mt-4'>
           Our mission is to enliven your road trip with the perfect travel van rental. Our vans are recertified before each trip to ensure your travel plans can go off without a hitch.
