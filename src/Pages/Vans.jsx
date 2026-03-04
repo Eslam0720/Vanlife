@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 function Vans() {
 
@@ -30,21 +31,25 @@ function Vans() {
 
     return (
         <>
-            <h1 className="text-center m-3 mb-5 text-bold text-3xl">Explore our van options</h1>
-            <div className="grid grid-cols-2 gap-2 justify-items-center h-screen w-screen">
-                {vans.map ((van) => {
-                        return(
+        <h1 className="text-center m-3 mb-5 text-bold text-3xl">Explore our van options</h1>
+        <div className="grid grid-cols-2 gap-2 justify-items-center h-screen w-screen">
+            {vans.map ((van) => {
+                    return(
+                        <Link to={`/vans/${van.id}`}>
                             <div key={van.id} className="border-b p-2 rounded-xl m-2 text-center text-2xl">
-                        <img className="object-contain w-160 h-100 " src={van.imageUrl} />
-                        <div className="van-info flex justify-between mx-30 mt-4 mb-8">
-                        <h3>{van.name}</h3>
-                        <p>${van.price}<span>/day</span></p>
-                        </div>
-                        <i className={`van-type ${van.type} selected`}>{van.type}</i>
-                        </div>
-                        )
-                    })}
-            </div>
+                                <img className="object-contain w-160 h-100 " src={van.imageUrl} />
+
+                                <div className="van-info flex justify-between mx-30 mt-4 mb-8">
+                                    <h3>{van.name}</h3>
+                                    <p>${van.price}<span>/day</span></p>
+                                </div>
+
+                                <i className={`van-type ${van.type} selected`}>{van.type}</i>
+                            </div>
+                        </Link>
+                    )
+                })}
+        </div>
         </>
     )
 }
