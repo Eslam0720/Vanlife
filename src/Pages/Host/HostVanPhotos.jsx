@@ -5,7 +5,7 @@ export default function HostVanPhotos() {
 
     return (
         <>
-            <img src={currentVan.imageUrl} className="w-48" />
+            <img src={currentVan.imageUrl} className="w-48 m-5" />
         </>
     )
 }
