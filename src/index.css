@@ -1,2 +1,27 @@
 @import "tailwindcss";
 
+@layer base {
+    h1 {
+        @apply font-extrabold;
+    }
+
+    h2 {
+        @apply font-bold;
+    }
+}
+
+@layer components {
+
+    .nav-bar {
+        @apply 
+        flex 
+        flex-wrap 
+        justify-start 
+        items-center 
+        gap-4 p-5 
+        mb-4 w-screen 
+        [&>a:hover]:underline 
+        [&>a:hover]:text-[#161616] 
+        [&>a:hover]:font-bold
+    }
+}
