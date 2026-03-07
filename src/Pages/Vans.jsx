@@ -32,7 +32,7 @@ function Vans() {
     return (
         <>
         <h1 className="text-center m-3 mb-5 text-bold text-3xl">Explore our van options</h1>
-        <div className="grid grid-cols-2 gap-2 justify-items-center h-screen w-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-items-center-safe h-screen w-screen">
             {vans.map ((van) => {
                     return(
                         <Link to={`/vans/${van.id}`}>
